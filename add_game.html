@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar Jogo</title>
+    <link rel="stylesheet" type="text/css" href="add_game.css">
+    <meta charset="UTF-8">
+    <style>
+        .scroll-container {
+            max-height: 100vh;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+    <div class="container">
+        <h2>Adicionar Jogo</h2>
+        <form action="add_game.php" method="POST" enctype="multipart/form-data">
+            <label for="name">Nome do Jogo:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="genre">Gênero do Jogo:</label>
+            <input type="text" id="genre" name="genre" required>
+            
+            <label for="age_rating">Classificação de Idade:</label>
+            <input type="number" id="age_rating" name="age_rating" required>
+            
+            <label for="price">Preço:</label>
+            <input type="number" step="0.01" id="price" name="price" required>
+            
+            <label for="creator">Criador:</label>
+            <input type="text" id="creator" name="creator" required>
+            
+            <label for="size">Tamanho do Jogo:</label>
+            <input type="number" step="0.01" id="size" name="size" required>
+            <select id="size_unit" name="size_unit">
+                <option value="MB">MB</option>
+                <option value="GB">GB</option>
+            </select>
+            <label for="image">Imagem:</label>
+            <input type="file" id="image" name="image" accept="image/*" class="imagem">
+            
+            <button type="submit" >Cadastrar</button>
+        </form>
+        
+    </div>
+</div>
+</body>
+</html>

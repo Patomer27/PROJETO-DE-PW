@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #004f3f; /* Cor de fundo alterada para corresponder ao primeiro exemplo */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #282828;
+}
+
+th {
+    background-color: #00796b;
+    color: white;
+}
+
+tr:hover {
+    background-color: #282828;
+}
+
+td img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: #00796b;
+    padding: 6px 12px;
+    border: 1px solid #00796b;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+a:hover {
+    background-color: #00796b;
+    color: white;
+}
+
+a:active {
+    background-color: #005b4f;
+    border-color: #005b4f;
+}
+
+a:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 121, 107, 0.5);
+}
+
+.return-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}

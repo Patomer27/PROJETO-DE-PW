@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #004f3f;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #009678;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #009678;
+    color: white;
+}
+
+th {
+    background-color: #282828;
+    color: #009678;
+}
+
+tr:hover {
+    background-color: #282828;
+}
+
+a {
+    color: #005b4f;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button.tela_inicial {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #005b4f;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.tela_inicial:hover {
+    background-color: #005b4f;
+}
+
+button.tela_inicial:focus {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+
+
+
+
