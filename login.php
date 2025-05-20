@@ -7,7 +7,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Consulta preparada para evitar SQL injection
     $stmt = $conn->prepare("SELECT * FROM usuarios WHERE username = ? AND email = ?");
     $stmt->bind_param("ss", $username, $email);
     $stmt->execute();

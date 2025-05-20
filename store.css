@@ -1,11 +1,18 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #004f3f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .games-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .game {
@@ -13,6 +20,9 @@ body {
     padding: 20px;
     width: 200px;
     text-align: center;
+    background-color: #282828; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .game img {
@@ -25,11 +35,13 @@ body {
 .game h2 {
     font-size: 20px;
     margin-bottom: 10px;
+    color: #4CAF50;
 }
 
 .game p {
     font-size: 14px;
     margin: 5px 0;
+    color: white;
 }
 
 .game form {
@@ -42,8 +54,34 @@ body {
     border: none;
     padding: 10px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .game button:hover {
     background-color: #45a049;
+}
+
+button {
+    
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00796b;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #005b4f;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 121, 107, 0.5);
 }

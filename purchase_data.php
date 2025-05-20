@@ -75,7 +75,7 @@ $conn->close();
             <button type="submit">Enviar</button><br><br>
             
         </form>
-        <a href="index.php"><button type="submit">Voltar a tela Inicial</button></a>
-    </div>
+        <button type="button" onclick="window.location.href='index.php'" class="button-link">PAGINA INICIAL</button>
+        </div>
 </body>
 </html>

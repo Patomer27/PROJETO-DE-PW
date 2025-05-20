@@ -16,13 +16,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $creator = $_POST['creator'];
     $size = $_POST['size'];
     $size_unit = $_POST['size_unit'];
-    $image_filename = $game['image_filename']; // Mantém o caminho atual da imagem
+    $image_filename = $game['image_filename']; 
 
     if (isset($_FILES["image"]) && $_FILES["image"]["name"]) {
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["image"]["name"]);
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-            $image_filename = basename($_FILES["image"]["name"]); // Atualiza o nome do arquivo da imagem
+            $image_filename = basename($_FILES["image"]["name"]); 
         }
     }
 
@@ -89,7 +89,8 @@ $conn->close();
             <input type="file" id="image" name="image" accept="image/*">
             
             <button type="submit">Atualizar</button>
-        </form>
+        </form><br>
+        <button type="button" onclick="window.location.href='index.php'" class="button-link">PAGINA INICIAL</button>
     </div>
 </div> 
 </body>

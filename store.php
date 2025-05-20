@@ -6,17 +6,15 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 include "db_connect.php";
-$sql = "SELECT * FROM jogos"; // Usar a tabela 'jogos'
+$sql = "SELECT * FROM jogos"; 
 $query = $conn->query($sql);
 
-// Depuração: Verifique se a consulta foi executada corretamente
 if (!$query) {
     die("Erro na consulta ao banco de dados: " . $conn->error);
 }
 
-// Depuração: Exibir o número de linhas retornadas
 $num_rows = $query->num_rows;
-echo "Número de jogos encontrados: " . $num_rows;
+
 ?>
 
 <!DOCTYPE html>
@@ -24,10 +22,11 @@ echo "Número de jogos encontrados: " . $num_rows;
 <head>
     <meta charset="UTF-8">
     <title>Loja de Jogos</title>
-    <link rel="stylesheet" href="store.css"> <!-- Você pode criar um CSS específico para esta página -->
+    <link rel="stylesheet" href="store.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<button type="button" onclick="window.location.href='index.php'">PAGINA INICIAL</button>
     <h1>Loja de Jogos</h1>
     <div class="games-container">
         <?php
@@ -35,14 +34,14 @@ echo "Número de jogos encontrados: " . $num_rows;
             while ($row = $query->fetch_assoc()) {
                 echo "<div class='game'>";
                 echo "<img src='uploads/" . htmlspecialchars($row['image_filename']) . "' alt='" . htmlspecialchars($row['name']) . "'>";
-                echo "<h2>" . htmlspecialchars($row['name']) . "</h2>"; // Usando a coluna 'name' para o nome do jogo
-                echo "<p>Gênero: " . htmlspecialchars($row['genre']) . "</p>"; // Exibir o gênero do jogo
-                echo "<p>Classificação: " . htmlspecialchars($row['age_rating']) . "</p>"; // Exibir a classificação etária
-                echo "<p>Criador: " . htmlspecialchars($row['creator']) . "</p>"; // Exibir o criador do jogo
-                echo "<p>Tamanho: " . htmlspecialchars($row['size']) . " " . htmlspecialchars($row['size_unit']) . "</p>"; // Exibir o tamanho do jogo
-                echo "<p>Preço: R$" . htmlspecialchars($row['price']) . "</p>"; // Exibir o preço do jogo
+                echo "<h2>" . htmlspecialchars($row['name']) . "</h2>"; 
+                echo "<p>Gênero: " . htmlspecialchars($row['genre']) . "</p>"; 
+                echo "<p>Classificação: " . htmlspecialchars($row['age_rating']) . "</p>";
+                echo "<p>Criador: " . htmlspecialchars($row['creator']) . "</p>";
+                echo "<p>Tamanho: " . htmlspecialchars($row['size']) . " " . htmlspecialchars($row['size_unit']) . "</p>"; 
+                echo "<p>Preço: R$" . htmlspecialchars($row['price']) . "</p>"; 
                 echo "<form action='add_to_cart.php' method='post'>";
-                echo "<input type='hidden' name='game_id' value='" . htmlspecialchars($row['id']) . "'>"; // Supondo que o ID esteja na coluna 'id'
+                echo "<input type='hidden' name='game_id' value='" . htmlspecialchars($row['id']) . "'>"; 
                 echo "<button type='submit'>Adicionar ao Carrinho</button>";
                 echo "</form>";
                 echo "</div>";

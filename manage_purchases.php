@@ -48,8 +48,8 @@ $result = $conn->query("SELECT * FROM compras WHERE ID_USUARIO = ".$_SESSION['us
             </tr>
             <?php } ?>
         </table><br>
+        <button type="button" onclick="window.location.href='index.php'" class="tela_inicial">PAGINA INICIAL</button>
 
-        <a href="index.php" ><button type="submit" class="tela_inicial">Voltar a tela Inicial</button></a>
     </div>
 </body>
 </html>

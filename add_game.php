@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $target_dir = "uploads/";
     $target_file = $target_dir . $image_filename;
 
-    // Certifique-se de que o diretório 'uploads' exista
+    
     if (!file_exists($target_dir)) {
         mkdir($target_dir, 0777, true);
     }

@@ -12,7 +12,8 @@ body {
 
 .text {color: white;}
 
-.DUCK{background-color: #444;}
+.DUCK{background-color: #444;
+color: white;}
 
 
 .container {
@@ -21,7 +22,7 @@ body {
 }
 
 .image-container {
-    width: 300px; /* Ajuste conforme necessário */
+    width: 300px; 
     text-align: center;
 }
 
@@ -69,6 +70,7 @@ input[type="password"] {
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
+    color: white;
 }
 
 input[type="text"]:focus,
@@ -77,6 +79,7 @@ input[type="password"]:focus {
     border-color: #00796b;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 121, 107, 0.3);
+    color: white;
 }
 
 button {

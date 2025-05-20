@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $url = "purchase_data.php";
-$muda_texto = "Cadastrar Compra";
+$muda_texto = "Cadastrar Informaçoes";
 
 include "db_connect.php";
 $sql = "SELECT * FROM compras WHERE ID_USUARIO = " . $_SESSION["user_id"];
@@ -14,9 +14,11 @@ $query = $conn->query($sql);
 
 if ($query->num_rows >= 1) {
     $url = "manage_purchases.php";
-    $muda_texto = "Informações da Compra";
+    $muda_texto = "Informações de Compra";
 }
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -34,8 +36,10 @@ if ($query->num_rows >= 1) {
             <a href="manage_games.php">Gerenciar Jogos</a>
             <a href="add_game.html">Adicionar Jogos</a>
             <a href="<?php echo $url; ?>"><?php echo $muda_texto; ?></a>
-            <a href="store.php">Loja</a> <!-- Botão "Loja" adicionado -->
+            <a href="store.php">Loja</a>
+            <a href="cart.php">Meu Carrinho</a>
             <a href="logout.php">Logout</a>
+            <a href="AGRADECIMENTOS/AGRADECIMENTOS.html">Agradecimentos</a>
         </div>
     </div>
 </body>

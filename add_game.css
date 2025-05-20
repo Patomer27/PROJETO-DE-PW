@@ -7,6 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+
 }
 
 .container {
@@ -20,11 +21,15 @@ body {
     
 }
 
-input{background-color: #444444;}
+input { 
+    background-color: #444444; 
+    color: white;
+}
 
-select{background-color: #444; }
-
-
+select { 
+    background-color: #444; 
+    color: white;
+}
 
 .container:hover {
     transform: scale(1.05);
@@ -70,6 +75,9 @@ button {
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 button:hover {
@@ -80,21 +88,3 @@ button:focus {
     outline: none;
     box-shadow: 0 0 0 4px rgba(0, 121, 107, 0.5);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
